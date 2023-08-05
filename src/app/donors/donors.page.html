@@ -1,0 +1,11 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title >Donors ListS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+   <app-donor-item *ngFor="let donor of donors" [donorItem]="donor"></app-donor-item>
+  </ion-list>
+</ion-content>

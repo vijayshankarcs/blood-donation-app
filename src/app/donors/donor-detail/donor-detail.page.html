@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-button slot="start">
+      <ion-back-button defaultHref="/donors"></ion-back-button>
+    </ion-button>
+    <ion-title>Donor Detail</ion-title>
+    <ion-button slot="primary">
+      <ion-button (click)="onDeleteDonor()">
+        <ion-icon name="trash" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-img [src]="donor?.avatar"></ion-img>
+    <ion-card-header>
+      <ion-card-title>{{donor?.donorName}}({{donor?.donorBloodGroup}})</ion-card-title>
+      <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+     
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{donor?.phoneNumber}}
+      <ion-row>
+      {{donor?.emailId}}
+    </ion-row>
+    <ion-row>
+      {{donor?.lastDonatedBy}}
+    </ion-row>
+    <ion-button fill="clear">Call</ion-button>
+    <ion-button fill="clear">CopyDetails</ion-button>
+    </ion-card-content>
+  </ion-card>
+<!-- <ion-alert-controller>
+
+</ion-alert-controller> -->
+</ion-content>
+
